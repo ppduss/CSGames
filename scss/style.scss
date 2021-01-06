@@ -2,7 +2,7 @@
 
 #hero {
   z-index: 0;
-  background-image: './assets/SLIDE-1@1x.png';
+  // background-image: './assets/SLIDE-1@1x.png';
   width: 100%;
   max-width: 2598px;
 }
@@ -10,3 +10,23 @@
   z-index: 5;
   position: fixed;
 }
+
+#csg_container {
+  display: flex;
+  align-items: center;
+}
+
+#csg_img {
+  width: 100vw;
+  max-width: 1034px;
+  margin: 23px, 1001px, 23px, 29px;
+}
+#csg_box {
+  box-shadow: 2px 3px 10px black;
+  display: flex;
+  width: 80vw;
+  max-width: 1364px;
+}
+// #csg_txt_container {
+
+// }
