@@ -11,20 +11,53 @@
 
 #csg_container {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  height: 634px;
 }
 
 #csg_img {
-  width: 100vw;
-  max-width: 1034px;
-  margin: 23px, 1001px, 23px, 29px;
+  max-width: 334px;
+  max-height: 382px;
 }
 
 #csg_box {
-  box-shadow: 2px 3px 10px black;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.63);
   display: flex;
   width: 80vw;
+  min-width: 800px;
   max-width: 1364px;
+  max-height: 428px;
+}
+
+#countdown_container {
+  height: 579px;
+  width: 1920px;
+  max-width: 2598px;
+  background: linear-gradient(70deg, #10213E, #284B80);
+}
+
+#time_container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.time_cube {
+  text-align: center;
+  width: 260px;
+  height: 260px;
+  background-color: #194384;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.63);
+}
+
+#time_txt_container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.time_txt {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
