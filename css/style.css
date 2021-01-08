@@ -19,7 +19,7 @@ h1 {
   margin: 0;
   margin-top: -20px;
   margin-bottom: -25px;
-  font-size: 5vw;
+  font-size: 5em;
 }
 h1#blue {
   color: #1D365E;
@@ -55,10 +55,13 @@ button {
   z-index: 0;
   opacity: 0.85;
   width: 100vw;
+  max-height: 1082px;
+  object-fit: cover;
 }
 .hero_section .hero_content {
   top: 8vw;
-  max-width: 1350px;
+  width: calc(300px + 50%);
+  max-width: 1200px;
   min-height: 600px;
   margin: 0 auto;
   position: relative;
@@ -71,21 +74,8 @@ button {
   width: 50%;
   padding: 30px 30px 30px 0px;
 }
-.hero_section .hero_content .bordered_box {
-  border: solid 8px #294B81;
-  position: absolute;
-  top: 50px;
-  bottom: 50px;
-  right: 50px;
-  left: 50px;
-}
 .hero_section .hero_content .svg {
   position: absolute;
-  top: 50px;
-  bottom: 50px;
-  right: 50px;
-  left: 50px;
-  background-color: rgba(154, 207, 143, 0.301);
 }
 
 /*# sourceMappingURL=style.css.map */
