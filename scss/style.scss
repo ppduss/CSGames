@@ -1,67 +1,173 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
 
 $lightblue: #48C1E1;
 $medblue: #194384;
 $darkblue: #1D365E;
+$breakpoint-main: 1920px; //determin once I have XD working
+$box-shadow: 0px 3px 6px #00000059;
 
-$shadow: 1px 1px 8px rgba(0, 0, 0, 0.63);
 
-
-#hero {
-  z-index: 0;
-  width: 100%;
-  max-width: 2598px;
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+body {
+  margin: 0;
 }
-#union {
-  z-index: 5;
+h1, h2, h3, h4, h5 {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'OpenSans-Extrabold';
+}
+h1 {
+  margin: 0;
+  margin-top: -20px;
+  margin-bottom: -25px;
+  font-size: 5vw;
+  &#blue {
+    color: $darkblue;
+  }
+}
+p{
+  font-family: Montserrat-Regular;
+  color: $darkblue;
+}
+button {
+  width: 231px;
+  height: 54px;
+  color: $darkblue;
+  font-family: 'OpenSans-Extrabold';
+  text-transform: uppercase;
+  border: 2px solid $darkblue;
+  background: none;
+}
+
+#sticky_section {
+  margin: 0 auto;
+  z-index: 3;
   position: fixed;
+  min-width: 500px;
+  height: 116px;
+  background-color: white;
+  box-shadow: $box-shadow;
 }
 
-#csg_container {
-  display: flex;
-  justify-content: center;
-  height: 634px;
+.hero_section {
+  // background: url("/assets/SLIDE-1@1X.png");
+  // min-height: 600px;
+  // // background-position: cover;
+  // background-repeat: no-repeat;
+
+  .hero_img {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.85;
+    width: 100vw;
+    }
+  .hero_content {
+    top: 8vw;
+    max-width: 1350px;
+    min-height: 600px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+
+    .hero_writing {
+      // background: url("/assets/SLIDE-1@1X.png");
+      // mask-image: url("/assets/SLIDE-1@1X.png");
+      z-index: 1;
+      width: 50%;
+      padding: 30px 30px 30px 0px;
+    }
+    .bordered_box {
+      border: solid 8px #294B81;
+      position: absolute;
+      top: 50px;
+      bottom: 50px;
+      right: 50px;
+      left: 50px;
+    }
+    .svg {
+      position: absolute;
+      top: 50px;
+      bottom: 50px;
+      right: 50px;
+      left: 50px;
+      // width: 100%;
+      background-color: rgba(154, 207, 143, 0.301);
+    }
+  }
 }
 
-#csg_img {
-  max-width: 334px;
-  max-height: 382px;
-}
-#csg_box {
-  box-shadow: $shadow;
-  display: flex;
-  width: 80vw;
-  min-width: 800px;
-  max-width: 1364px;
-  max-height: 428px;
-}
-// #csg_txt_container {
 
+
+
+// #hero_content_container {
+//   margin-top: 8%;
+//   margin-left: 15%;
+//   position: absolute;
+//   display: flex;
+//   flex-direction: column;
+//   // width: 900px;
 // }
 
-#countdown_container {
-  height: 579px;
-  width: 1920px;
-  max-width: 2598px;
-  background: linear-gradient(70deg, #10213E, #284B80);
-}
+// #hero_h2 {
+//   color: $darkblue;
+//   font-family: Montserrat-Regular;
+//   font-size:  18px;
+//   text-align: left;
+// }
+// #hero_p {
+//   color: $darkblue;
+//   font-family: Montserrat-Regular;
+//   text-align: left;
+// }
 
-#time_container {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-}
-.time_cube {
-  text-align: center;
-  width: 260px;
-  height: 260px;
-  background-color: #194384;
-  box-shadow: $shadow;
-}
-#time_txt_container {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-}
-.time_txt {
-  color: white;
-}
+// #csg_section {
+//   top: 1185px;
+//   display: flex;
+//   justify-content: center;
+//   height: 634px;
+// }
+
+// #csg_img {
+//   max-width: 334px;
+//   max-height: 382px;
+// }
+// #csg_box {
+//   box-shadow: $shadow;
+//   display: flex;
+//   max-width: 1364px;
+//   max-height: 428px;
+// }
+// // #csg_txt_container {
+
+// // }
+
+// #countdown_section {
+//   height: 579px;
+//   width: 1920px;
+//   max-width: 2598px;
+//   background: linear-gradient(70deg, #10213E, #284B80);
+// }
+
+// #time_container {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 80%;
+// }
+// .time_cube {
+//   text-align: center;
+//   width: 260px;
+//   height: 260px;
+//   background-color: #194384;
+//   box-shadow: $shadow;
+// }
+// #time_txt_container {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 80%;
+// }
+// .time_txt {
+//   color: white;
+// }
