@@ -6,13 +6,6 @@ $darkblue: #1D365E;
 $breakpoint-main: 1920px; //determin once I have XD working
 $box-shadow: 0px 3px 6px #00000059;
 
-// line {
-//   stroke: #f4f;
-//   &#ltor {
-//     stroke: #1D365E 0%, #194384 100%;
-//   }
-// }
-
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 body {
   margin: 0;
@@ -26,7 +19,7 @@ h1 {
   margin: 0;
   margin-top: -20px;
   margin-bottom: -25px;
-  font-size: 5em;
+  font-size: 7em;
   &#blue {
     color: $darkblue;
   }
@@ -36,6 +29,7 @@ p{
   color: $darkblue;
 }
 button {
+  margin-top: 12px;
   width: 231px;
   height: 54px;
   color: $darkblue;
@@ -46,17 +40,21 @@ button {
 }
 
 #sticky_section {
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 37px;
   margin: 0 auto;
   z-index: 3;
   position: fixed;
-  min-width: 500px;
+  width: 80vw;
+  max-width: 1364px;
   height: 116px;
   background-color: white;
   box-shadow: $box-shadow;
 }
 
 .hero_section {
-
+  
   .hero_img {
     position: absolute;
     z-index: 0;
@@ -64,23 +62,26 @@ button {
     width: 100vw;
     max-height: 1082px;
     object-fit: cover;
-    }
+  }
 
   .hero_content {
-    top: 8vw;
-    width: calc(300px + 50%);
+    
+    top: 11vw;
+    width: calc(400px + 40%);
     max-width: 1200px;
-    min-height: 600px;
+    // min-height: 600px;
     margin: 0 auto;
     position: relative;
-    height: 100%;
+    height: 741px;
     display: flex;
     align-items: center;
 
     .hero_writing {
+      position: absolute;
       z-index: 1;
       width: 50%;
       padding: 30px 30px 30px 0px;
+      left: -8%;
     }
 
     .svg {
@@ -88,9 +89,8 @@ button {
       // top: 50px;
       // bottom: 50px;
       // right: 50px;
-      // left: 50px;
+      // left: 10%;
       // max-width: 1364px;
-      // background-color: rgba(154, 207, 143, 0.212);
     }
   }
 }
