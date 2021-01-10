@@ -56,7 +56,7 @@ h1 {
 }
 @media (min-width: 1200px) {
   h1 {
-    font-size: 7em;
+    font-size: 6.5em;
   }
 }
 
@@ -73,25 +73,31 @@ p {
   z-index: 3;
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   width: 80vw;
   max-width: 1364px;
-  height: 116px;
+  height: 80px;
   background-color: white;
   box-shadow: 0px 3px 6px #00000059;
 }
-#hdr_section #hr_container {
-  background-color: white;
-  height: 100%;
+@media (min-width: 768px) {
+  #hdr_section {
+    height: 100px;
+  }
 }
-#hdr_section #hr_container #hr {
-  position: relative;
+@media (min-width: 1200px) {
+  #hdr_section {
+    height: 116px;
+  }
+}
+#hdr_section #hr {
+  top: 0px;
+  position: fixed;
   width: 278px;
   height: 5px;
   background-color: #1d365e;
-  margin-bottom: 16px;
 }
-#hdr_section #hdr {
+#hdr_section .hdr {
   padding-right: 3%;
   padding-left: 3%;
   position: absolute;
@@ -100,7 +106,12 @@ p {
   justify-content: space-between;
   width: 100%;
 }
-#hdr_section #hdr #hdr_link {
+@media (min-width: 1200px) {
+  #hdr_section .hdr .logo {
+    width: auto;
+  }
+}
+#hdr_section .hdr #hdr_link {
   font-size: 1.1em;
   width: 400px;
 }
@@ -109,26 +120,42 @@ p {
   position: absolute;
   z-index: 0;
   opacity: 0.85;
-  width: 100vw;
-  height: 1082px;
+  width: 100%;
   object-fit: cover;
+  height: 85%;
+}
+@media (min-width: 992px) {
+  .hero_section .hero_img {
+    height: 1082px;
+  }
 }
 .hero_section .hero_content {
-  top: 11vw;
+  top: 12vw;
   width: calc(400px + 40%);
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
-  height: 741px;
+  height: 75vh;
   display: flex;
   align-items: center;
+}
+@media (min-width: 992px) {
+  .hero_section .hero_content {
+    height: 741px;
+  }
 }
 .hero_section .hero_content .hero_writing {
   position: absolute;
   z-index: 1;
-  width: 65%;
-  padding: 30px 30px 30px 0px;
+  padding: 80px;
+  width: 100%;
   left: 0%;
+  font-size: 1em;
+}
+@media (min-width: 768px) {
+  .hero_section .hero_content .hero_writing {
+    width: 65%;
+  }
 }
 @media (min-width: 1200px) {
   .hero_section .hero_content .hero_writing {

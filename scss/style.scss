@@ -74,8 +74,11 @@ h1 {
     font-size: 6em;
   }
   @include xl {
-    font-size: 7em;
+    font-size: 6.5em;
   }
+}
+h6 {
+
 }
 p{
   font-family: Montserrat-Regular;
@@ -91,25 +94,33 @@ p{
   z-index: 3;
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   width: 80vw;
   max-width: 1364px;
-  height: 116px;
+  height: 80px;
   background-color: white;
   box-shadow: $box-shadow;
-  #hr_container {
-    background-color: white;
-    height: 100%;
+  @include md {
+    height: 100px;
+  }
+  @include xl {
+    height: 116px;
+  }
+
+  // #hr_container {
+  //   background-color: white;
+  //   height: 100%;
 
     #hr {
-    position: relative;
+    top: 0px;
+    position: fixed;
     width: 278px;
     height: 5px;
     background-color: #1d365e;
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
     }
-  }
-  #hdr {
+  // }
+  .hdr {
     padding-right: 3%;
     padding-left: 3%;
     position: absolute;
@@ -117,8 +128,11 @@ p{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-      .logo {
-
+    .logo {
+      // width: 180px;
+      @include xl {
+        width: auto;
+      }
     }
     #hdr_link {
       font-size: 1.1em;
@@ -134,28 +148,40 @@ p{
     position: absolute;
     z-index: 0;
     opacity: 0.85;
-    width: 100vw;
-    height: 1082px;
+    width: 100%;
     object-fit: cover;
+    height: 85%;
+    @include lg {
+      height: 1082px;
+    }
   }
 
   .hero_content {
-    top: 11vw;
+    top: 12vw;
     width: calc(400px + 40%);
     max-width: 1200px;
     // min-height: 600px;
     margin: 0 auto;
     position: relative;
-    height: 741px;
+    height: 75vh;
     display: flex;
     align-items: center;
+    @include lg {
+    height: 741px;
 
+      // height: 90vh;
+    }
     .hero_writing {
       position: absolute;
       z-index: 1;
-      width: 65%;
-      padding: 30px 30px 30px 0px;
+      padding: 80px;
+      width: 100%;
       left: 0%;
+      font-size: 1em;
+      @include md {
+        // padding: none;
+        width: 65%;
+      }
       @include xl {
         left: -8%;
 
@@ -163,6 +189,7 @@ p{
     }
 
     .svg {
+      
       position: absolute;
       display: none;
       @include md {
