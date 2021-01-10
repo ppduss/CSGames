@@ -5,29 +5,12 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   margin: 0;
-}
-
-h1, h2, h3, h4, h5 {
-  color: white;
-  text-transform: uppercase;
-  font-family: "OpenSans-Extrabold";
-}
-
-h1 {
-  margin: 0;
-  margin-top: -20px;
-  margin-bottom: -25px;
-  font-size: 7em;
-}
-h1#blue {
-  color: #1D365E;
-}
-
-p {
-  font-family: Montserrat-Regular;
-  color: #1D365E;
 }
 
 button {
@@ -41,18 +24,85 @@ button {
   background: none;
 }
 
-#sticky_section {
+h1, h2, h3, h4, h5 {
+  color: white;
+  text-transform: uppercase;
+  font-family: "OpenSans-Extrabold";
+}
+h1.blue, h2.blue, h3.blue, h4.blue, h5.blue {
+  color: #1D365E;
+}
+
+h1 {
+  margin: 0;
+  margin-top: -20px;
+  margin-bottom: -25px;
+  font-size: 3em;
+}
+@media (min-width: 576px) {
+  h1 {
+    font-size: 4em;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5em;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 6em;
+  }
+}
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 7em;
+  }
+}
+
+p {
+  font-family: Montserrat-Regular;
+  color: #1D365E;
+}
+
+#hdr_section {
   left: 50%;
   transform: translate(-50%, 0);
   top: 37px;
   margin: 0 auto;
   z-index: 3;
   position: fixed;
+  display: flex;
+  justify-content: space-between;
   width: 80vw;
   max-width: 1364px;
   height: 116px;
   background-color: white;
   box-shadow: 0px 3px 6px #00000059;
+}
+#hdr_section #hr_container {
+  background-color: white;
+  height: 100%;
+}
+#hdr_section #hr_container #hr {
+  position: relative;
+  width: 278px;
+  height: 5px;
+  background-color: #1d365e;
+  margin-bottom: 16px;
+}
+#hdr_section #hdr {
+  padding-right: 3%;
+  padding-left: 3%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+#hdr_section #hdr #hdr_link {
+  font-size: 1.1em;
+  width: 400px;
 }
 
 .hero_section .hero_img {
@@ -60,7 +110,7 @@ button {
   z-index: 0;
   opacity: 0.85;
   width: 100vw;
-  max-height: 1082px;
+  height: 1082px;
   object-fit: cover;
 }
 .hero_section .hero_content {
@@ -76,12 +126,23 @@ button {
 .hero_section .hero_content .hero_writing {
   position: absolute;
   z-index: 1;
-  width: 50%;
+  width: 65%;
   padding: 30px 30px 30px 0px;
-  left: -8%;
+  left: 0%;
+}
+@media (min-width: 1200px) {
+  .hero_section .hero_content .hero_writing {
+    left: -8%;
+  }
 }
 .hero_section .hero_content .svg {
   position: absolute;
+  display: none;
+}
+@media (min-width: 768px) {
+  .hero_section .hero_content .svg {
+    display: inline;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
