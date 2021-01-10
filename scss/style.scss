@@ -77,14 +77,23 @@ h1 {
     font-size: 6.5em;
   }
 }
-h6 {
 
+h5 {
+  font-size: 0.65em;
+  @include sm {
+    font-size: 0.75em;
+  }
+  @include md {
+    font-size: 0.95em;
+  }
+}
+h6 {
+  // font-size: ;
 }
 p{
   font-family: Montserrat-Regular;
   color: $darkblue;
 }
-
 
 #hdr_section {
   left: 50%;
@@ -95,31 +104,41 @@ p{
   position: fixed;
   display: flex;
   align-items: center;
-  width: 80vw;
+  width: 95vw;
   max-width: 1364px;
-  height: 80px;
+  height: 70px;
   background-color: white;
   box-shadow: $box-shadow;
+  @include sm {
+    height: 80px;
+    width: 90vw;
+  }
   @include md {
     height: 100px;
+    width: 90vw;
   }
   @include xl {
     height: 116px;
+    width: 80vw;
   }
-
-  // #hr_container {
-  //   background-color: white;
-  //   height: 100%;
 
     #hr {
     top: 0px;
     position: fixed;
-    width: 278px;
+    width: 125px;
     height: 5px;
     background-color: #1d365e;
-    // margin-bottom: 16px;
+    @include sm {
+      width: 200px;
     }
-  // }
+    @include md {
+      width: 275px;
+    }
+    @include xl {
+      width: 331.5px;
+    }
+    }
+
   .hdr {
     padding-right: 3%;
     padding-left: 3%;
@@ -129,21 +148,25 @@ p{
     justify-content: space-between;
     width: 100%;
     .logo {
-      // width: 180px;
+      width: 100px;
+      @include sm {
+        width: 150px;
+      }
+      @include md {
+        width: 200px;
+      }
       @include xl {
         width: auto;
       }
     }
     #hdr_link {
       font-size: 1.1em;
-      width: 400px;
+      // width: 50px;
     }
   }
 }
 
-
 .hero_section {
-  
   .hero_img {
     position: absolute;
     z-index: 0;
@@ -151,45 +174,60 @@ p{
     width: 100%;
     object-fit: cover;
     height: 85%;
+    @include md {
+      height: 900px;
+    }
     @include lg {
       height: 1082px;
     }
   }
 
   .hero_content {
-    top: 12vw;
-    width: calc(400px + 40%);
+    top: 6vh;
+    width: 100%;
     max-width: 1200px;
-    // min-height: 600px;
     margin: 0 auto;
     position: relative;
-    height: 75vh;
+    height: 680px;
     display: flex;
     align-items: center;
+    @include sm {
+      width: calc(400px + 40%);
+    }
+    @include md {
+      top: calc(100px + 6vw);
+    }
     @include lg {
     height: 741px;
-
-      // height: 90vh;
     }
-    .hero_writing {
+    .hero_txt {
       position: absolute;
       z-index: 1;
-      padding: 80px;
-      width: 100%;
-      left: 0%;
+      // padding: 30px;
+      width: 85%;
+      left: 6%;
       font-size: 1em;
+      @include sm {
+        left: 6%;
+      }
       @include md {
-        // padding: none;
-        width: 65%;
+        left: 0%;
+        width: 80%;
+      }
+      @include lg {
+        width: 75%;
       }
       @include xl {
-        left: -8%;
+        left: -10%;
+        width: 75%;
+      }
 
+      #hero_paragraph {
+        width: 80%;
       }
     }
 
     .svg {
-      
       position: absolute;
       display: none;
       @include md {
