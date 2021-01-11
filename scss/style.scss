@@ -6,7 +6,7 @@ $blue: #194384;
 $darkblue: #1D365E;
 $box-shadow: 0px 3px 6px #00000059;
 
-// -----  breakpoints  ----- //
+//--- breakpoints  ---//
 $sm-min: 576px;
 $md-min: 768px;
 $lg-min: 992px;
@@ -41,11 +41,17 @@ $xl-min: 1200px;
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 a {
   text-decoration: none;
+  color: $darkblue;
+  &:hover {
+  font-size: 1.01em;
+  text-decoration: underline;
+  -moz-text-decoration-color: white;
+  text-decoration-color: white;
+
+  }
 }
 body {
   margin: 0;
-  // display: flex;
-  // flex-direction: column;
 }
 button {
   margin-top: 12px;
@@ -56,6 +62,9 @@ button {
   text-transform: uppercase;
   border: 2px solid $darkblue;
   background: none;
+  &:hover {
+    border: 3px solid $darkblue;
+  }
   @include xl {
     width: 231px;
   }
@@ -63,6 +72,10 @@ button {
     color: white;
     background-color: $aqua;
     border: none;
+    &:hover {
+    // border: 3px solid white;
+    background-color: $darkblue;
+  }
   }
 }
 h1, h2, h3, h4, h5 {
@@ -74,17 +87,21 @@ h1, h2, h3, h4, h5 {
 }
 h1 {
   margin: 0;
-  margin-top: -20px;
-  margin-bottom: -45px;
-  font-size: 3em;
+  margin-top: 0px;
+  margin-bottom: -15px;
+  font-size: 3.5em;
   @include sm {
     font-size: 4em;
+    margin-top: -10px;
   }
   @include md {
     font-size: 5em;
+    margin-top: -20px;
+
   }
   @include lg {
     font-size: 6em;
+    margin-bottom: -45px;
   }
   @include xl {
     font-size: 7em;
@@ -100,14 +117,25 @@ h5 {
   }
 }
 h6 {
-  font-size: 1em;
-  line-height: 30px;
+  font-size: 0.9em;
+  line-height: 25px;
+  margin: 25px auto;
+  @include sm {
+    line-height: 30px;
+    font-size: 1em;
+    margin: 37px auto;
+  }
 }
 p{
   font-family: Montserrat-Regular;
   color: $darkblue;
-  line-height: 30px;
+  line-height: 25px;
+  font-size: 0.9em;
 
+  @include sm {
+    line-height: 30px;
+    font-size: 1em;
+  }
 }
 
 .blue {
@@ -193,18 +221,15 @@ p{
 }
 
 .hero_section {
-      height: 650px;
-    @include sm {
       height: 700px;
+    @include sm {
+      height: 800px;
     }
     @include md {
-      height: 900px;
-    }
-    @include lg {
-      height: 1082px;
+      height: 1000px;
     }
     @include xl {
-      height: 1100px;
+      height: 1082px;
     }
   .hero_img {
     position: absolute;
@@ -212,18 +237,15 @@ p{
     opacity: 0.85;
     width: 100%;
     object-fit: cover;
-      height: 650px;
-    @include sm {
       height: 700px;
+    @include sm {
+      height: 800px;
     }      
     @include md {
-      height: 900px;
-    }
-    @include lg {
-      height: 1082px;
+      height: 1000px;
     }
     @include xl {
-      height: 1100px;
+      height: 1082px;
     }
   }
 
@@ -252,9 +274,9 @@ p{
       flex-direction: column;
       // justify-content: center;
       align-items: center;
-      position: relative;
+      // position: relative;
       z-index: 1;
-      width: 90%;
+      width: 100%;
       left: 6%;
       font-size: 1em;
       @include sm {
@@ -262,14 +284,12 @@ p{
 
       }
       @include md {
-        left: 0%;
-        width: 80%;
-        position: absolute;
-        align-items: left;
-        
       }
       @include lg {
         width: 75%;
+        display: inline;
+        position: absolute;
+        align-items: left;
       }
       @include xl {
         left: -10%;
@@ -278,6 +298,10 @@ p{
 
       #hero_paragraph {
         width: 80%;
+        text-align: center;
+        @include md {
+          text-align: left;
+        }
       }
     }
 
@@ -310,7 +334,10 @@ p{
   }
   
   #registration_img {
-  width: 300px;
+  width: 250px;
+  @include sm {
+    width: 300px;
+  }
   @include md {
     width: auto;
   }

@@ -8,6 +8,13 @@
 
 a {
   text-decoration: none;
+  color: #1D365E;
+}
+a:hover {
+  font-size: 1.01em;
+  text-decoration: underline;
+  -moz-text-decoration-color: white;
+  text-decoration-color: white;
 }
 
 body {
@@ -24,6 +31,9 @@ button {
   border: 2px solid #1D365E;
   background: none;
 }
+button:hover {
+  border: 3px solid #1D365E;
+}
 @media (min-width: 1200px) {
   button {
     width: 231px;
@@ -33,6 +43,9 @@ button.aqua {
   color: white;
   background-color: #48C1E1;
   border: none;
+}
+button.aqua:hover {
+  background-color: #1D365E;
 }
 
 h1, h2, h3, h4, h5 {
@@ -44,23 +57,26 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   margin: 0;
-  margin-top: -20px;
-  margin-bottom: -45px;
-  font-size: 3em;
+  margin-top: 0px;
+  margin-bottom: -15px;
+  font-size: 3.5em;
 }
 @media (min-width: 576px) {
   h1 {
     font-size: 4em;
+    margin-top: -10px;
   }
 }
 @media (min-width: 768px) {
   h1 {
     font-size: 5em;
+    margin-top: -20px;
   }
 }
 @media (min-width: 992px) {
   h1 {
     font-size: 6em;
+    margin-bottom: -45px;
   }
 }
 @media (min-width: 1200px) {
@@ -84,14 +100,29 @@ h5 {
 }
 
 h6 {
-  font-size: 1em;
-  line-height: 30px;
+  font-size: 0.9em;
+  line-height: 25px;
+  margin: 25px auto;
+}
+@media (min-width: 576px) {
+  h6 {
+    line-height: 30px;
+    font-size: 1em;
+    margin: 37px auto;
+  }
 }
 
 p {
   font-family: Montserrat-Regular;
   color: #1D365E;
-  line-height: 30px;
+  line-height: 25px;
+  font-size: 0.9em;
+}
+@media (min-width: 576px) {
+  p {
+    line-height: 30px;
+    font-size: 1em;
+  }
 }
 
 .blue {
@@ -193,26 +224,21 @@ p {
 }
 
 .hero_section {
-  height: 650px;
+  height: 700px;
 }
 @media (min-width: 576px) {
   .hero_section {
-    height: 700px;
+    height: 800px;
   }
 }
 @media (min-width: 768px) {
   .hero_section {
-    height: 900px;
-  }
-}
-@media (min-width: 992px) {
-  .hero_section {
-    height: 1082px;
+    height: 1000px;
   }
 }
 @media (min-width: 1200px) {
   .hero_section {
-    height: 1100px;
+    height: 1082px;
   }
 }
 .hero_section .hero_img {
@@ -221,26 +247,21 @@ p {
   opacity: 0.85;
   width: 100%;
   object-fit: cover;
-  height: 650px;
+  height: 700px;
 }
 @media (min-width: 576px) {
   .hero_section .hero_img {
-    height: 700px;
+    height: 800px;
   }
 }
 @media (min-width: 768px) {
   .hero_section .hero_img {
-    height: 900px;
-  }
-}
-@media (min-width: 992px) {
-  .hero_section .hero_img {
-    height: 1082px;
+    height: 1000px;
   }
 }
 @media (min-width: 1200px) {
   .hero_section .hero_img {
-    height: 1100px;
+    height: 1082px;
   }
 }
 .hero_section .hero_content {
@@ -272,9 +293,8 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   z-index: 1;
-  width: 90%;
+  width: 100%;
   left: 6%;
   font-size: 1em;
 }
@@ -283,17 +303,12 @@ p {
     left: 6%;
   }
 }
-@media (min-width: 768px) {
-  .hero_section .hero_content .hero_txt {
-    left: 0%;
-    width: 80%;
-    position: absolute;
-    align-items: left;
-  }
-}
 @media (min-width: 992px) {
   .hero_section .hero_content .hero_txt {
     width: 75%;
+    display: inline;
+    position: absolute;
+    align-items: left;
   }
 }
 @media (min-width: 1200px) {
@@ -304,6 +319,12 @@ p {
 }
 .hero_section .hero_content .hero_txt #hero_paragraph {
   width: 80%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .hero_section .hero_content .hero_txt #hero_paragraph {
+    text-align: left;
+  }
 }
 .hero_section .hero_content .svg {
   position: absolute;
@@ -334,7 +355,12 @@ p {
   }
 }
 #registration_section #registration_box #registration_img {
-  width: 300px;
+  width: 250px;
+}
+@media (min-width: 576px) {
+  #registration_section #registration_box #registration_img {
+    width: 300px;
+  }
 }
 @media (min-width: 768px) {
   #registration_section #registration_box #registration_img {
