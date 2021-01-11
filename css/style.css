@@ -338,20 +338,24 @@ p {
   justify-content: space-between;
   width: 1364px;
 }
-#countdown_section .time_cube {
-  text-align: center;
-  align-self: center;
+#countdown_section #time_container .time_cube {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 260px;
   height: 260px;
   background-color: #194384;
   box-shadow: 0px 3px 6px #00000059;
 }
-#countdown_section #time_txt_container {
+#countdown_section #time_container .time_cube .time {
+  font-size: 5em;
+}
+#countdown_section #countdown_txt_container {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 1364px;
 }
-#countdown_section .time_txt {
+#countdown_section #countdown_txt_container .countdown_txt {
   color: white;
 }
 

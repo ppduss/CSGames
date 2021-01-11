@@ -322,21 +322,27 @@ p{
     display: flex;
     justify-content: space-between;
     width: 1364px;
+    .time_cube {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 260px;
+      height: 260px;
+      background-color: #194384;
+      box-shadow: $box-shadow;
+      
+      .time {
+        font-size: 5em;
+       }
+    }
   }
-  .time_cube {
-    text-align: center;
-    align-self: center;
-    width: 260px;
-    height: 260px;
-    background-color: #194384;
-    box-shadow: $box-shadow;
-  }
-  #time_txt_container {
+  #countdown_txt_container {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-  }
-  .time_txt {
-    color: white;
+    width: 1364px;
+    // vertical-align: middle;
+  .countdown_txt {
+      color: white;
+    }
   }
 }
