@@ -40,6 +40,8 @@ a {
 }
 body {
   margin: 0;
+  // display: flex;
+  // flex-direction: column;
 }
 button {
   margin-top: 12px;
@@ -50,6 +52,11 @@ button {
   text-transform: uppercase;
   border: 2px solid $darkblue;
   background: none;
+  &.aqua {
+    color: white;
+    background-color: $lightblue;
+    border: none;
+  }
 }
 h1, h2, h3, h4, h5 {
   color: white;
@@ -77,7 +84,6 @@ h1 {
     font-size: 6.5em;
   }
 }
-
 h5 {
   font-size: 0.65em;
   @include sm {
@@ -94,7 +100,11 @@ p{
   font-family: Montserrat-Regular;
   color: $darkblue;
 }
-
+.main_container {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: space-between;
+}
 #hdr_section {
   left: 50%;
   transform: translate(-50%, 0);
@@ -167,18 +177,37 @@ p{
 }
 
 .hero_section {
+      height: 650px;
+    @include sm {
+      height: 700px;
+    }
+    @include md {
+      height: 900px;
+    }
+    @include lg {
+      height: 1082px;
+    }
+    @include xl {
+      height: 1100px;
+    }
   .hero_img {
     position: absolute;
     z-index: 0;
     opacity: 0.85;
     width: 100%;
     object-fit: cover;
-    height: 85%;
+      height: 650px;
+    @include sm {
+      height: 700px;
+    }      
     @include md {
       height: 900px;
     }
     @include lg {
       height: 1082px;
+    }
+    @include xl {
+      height: 1100px;
     }
   }
 
@@ -200,6 +229,7 @@ p{
     @include lg {
     height: 741px;
     }
+
     .hero_txt {
       position: absolute;
       z-index: 1;
@@ -238,49 +268,52 @@ p{
 }
 
 
+#registration_section {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+
+  #registration_box {
+  box-shadow: $box-shadow;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  max-width: 1364px;
+  // max-height: 428px;
+  flex-direction: column;
+    @include md {
+    flex-direction: row;
+  }
+  
+  #registration_img {
+  width: 300px;
+  @include md {
+    width: auto;
+  }
+  // @include lg {
+  // width: auto;
+  // }
+  // @include xl {
+  // width: auto;
+
+  // }
+  }
+  #registration_txt {
+    padding: 4%;
+    text-align: center;
+    @include md {
+    text-align: left;
+
+    }
+  }
+}
+}
 
 
-// #hero_content_container {
-//   margin-top: 8%;
-//   margin-left: 15%;
-//   position: absolute;
-//   display: flex;
-//   flex-direction: column;
-//   // width: 900px;
-// }
 
-// #hero_h2 {
-//   color: $darkblue;
-//   font-family: Montserrat-Regular;
-//   font-size:  18px;
-//   text-align: left;
-// }
-// #hero_p {
-//   color: $darkblue;
-//   font-family: Montserrat-Regular;
-//   text-align: left;
-// }
+// #registration_txt_container {
 
-// #csg_section {
-//   top: 1185px;
-//   display: flex;
-//   justify-content: center;
-//   height: 634px;
 // }
-
-// #csg_img {
-//   max-width: 334px;
-//   max-height: 382px;
-// }
-// #csg_box {
-//   box-shadow: $shadow;
-//   display: flex;
-//   max-width: 1364px;
-//   max-height: 428px;
-// }
-// // #csg_txt_container {
-
-// // }
 
 // #countdown_section {
 //   height: 579px;
