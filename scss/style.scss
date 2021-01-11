@@ -32,7 +32,11 @@ $xl-min: 1200px;
        @content;
    }
 }
-
+@mixin custm($screen) {
+   @media (min-width: $screen+'px') {
+       @content;
+   }
+}
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 a {
@@ -321,28 +325,58 @@ p{
   #time_container {
     display: flex;
     justify-content: space-between;
-    width: 1364px;
+    max-width: 1364px;
+    @include sm {
+    width: 90vw;
+    }
+    @include md {
+    width: 90vw;
+    }
+    @include xl {
+    width: 80vw;
+    } 
     .time_cube {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 260px;
-      height: 260px;
+      width: 150px;
+      height: 150px;
       background-color: #194384;
       box-shadow: $box-shadow;
-      
+      @include md {
+      width: 160px;
+      height: 160px;           
+      }
+      @include lg {
+      width: 200px;
+      height: 200px;           
+      }
+      @include xl {
+      width: 230px;
+      height: 230px;           
+      }
+      @include custm(1400) {
+      width: 260px;
+      height: 260px;        
+      }
       .time {
-        font-size: 5em;
+        font-size: 3em;
+        @include md {
+          font-size: 4em;
+        }
+        @include lg {
+          font-size: 5em;
+        }
        }
     }
-  }
-  #countdown_txt_container {
-    display: flex;
-    justify-content: space-between;
-    width: 1364px;
-    // vertical-align: middle;
-  .countdown_txt {
-      color: white;
+    .cont {
+      align-items: center;
+      display: flex;
+      flex-direction: column
+    }
+    .countdown_txt {
+      margin-top: 10px;
     }
   }
+
 }
