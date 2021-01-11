@@ -1,9 +1,9 @@
-@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
-$lightblue: #48C1E1;
-$medblue: #194384;
+$aqua: #48C1E1;
+$blue: #194384;
 $darkblue: #1D365E;
-$breakpoint-main: 1920px; //determin once I have XD working
 $box-shadow: 0px 3px 6px #00000059;
 
 // -----  breakpoints  ----- //
@@ -49,16 +49,19 @@ body {
 }
 button {
   margin-top: 12px;
-  width: 231px;
+  width: 200px;
   height: 54px;
   color: $darkblue;
   font-family: 'OpenSans-Extrabold';
   text-transform: uppercase;
   border: 2px solid $darkblue;
   background: none;
+  @include xl {
+    width: 231px;
+  }
   &.aqua {
     color: white;
-    background-color: $lightblue;
+    background-color: $aqua;
     border: none;
   }
 }
@@ -67,9 +70,7 @@ h1, h2, h3, h4, h5 {
   color: white;
   text-transform: uppercase;
   font-family: 'OpenSans-Extrabold';
-  &.blue {
-    color: $darkblue;
-  }
+
 }
 h1 {
   margin: 0;
@@ -98,18 +99,22 @@ h5 {
     font-size: 0.95em;
   }
 }
-h6 {
-  // font-size: ;
-}
 p{
   font-family: Montserrat-Regular;
   color: $darkblue;
 }
-.main_container {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: space-between;
+
+.blue {
+  color: $blue;
 }
+.darkblue {
+  color: $darkblue;
+}
+.aqua {
+  color: $aqua;
+}
+
+
 #hdr_section {
   left: 50%;
   transform: translate(-50%, 0);
@@ -316,33 +321,60 @@ p{
 
 
 #countdown_section {
-  height: 579px;
+  height: 450px;
   background: linear-gradient(70deg, #10213E, #284B80);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  #time_container {
+  @include md {
+    height: 579px;
+  }
+  #countdown_hdr {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    @include sm {
+      flex-direction: row;
+    }
+    @include md {
+      margin-bottom: 60px;
+    }
+  }
+  .time_container {
+    display: none;
+    flex-direction: row;
     justify-content: space-between;
     max-width: 1364px;
     @include sm {
     width: 90vw;
     }
     @include md {
+    display: flex;
     width: 90vw;
     }
     @include xl {
     width: 80vw;
     } 
-    .time_cube {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 150px;
-      height: 150px;
-      background-color: #194384;
-      box-shadow: $box-shadow;
+  }
+  .cont {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .time_cube {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 150px;
+    background-color: #194384;
+    box-shadow: $box-shadow;
+      @include sm {
+      width: 450px;
+      height: 150px;           
+      }
       @include md {
       width: 160px;
       height: 160px;           
@@ -359,24 +391,30 @@ p{
       width: 260px;
       height: 260px;        
       }
-      .time {
-        font-size: 3em;
-        @include md {
-          font-size: 4em;
-        }
-        @include lg {
-          font-size: 5em;
-        }
-       }
-    }
-    .cont {
-      align-items: center;
-      display: flex;
-      flex-direction: column
-    }
-    .countdown_txt {
+  }
+  .time {
+      font-size: 3em;
+      @include md {
+        font-size: 4em;
+      }
+      @include lg {
+        font-size: 5em;
+      }
+  }
+  .countdown_txt {
       margin-top: 10px;
-    }
   }
 
-}
+  .single_cube_container {
+    display: inline;
+    @include md {
+      display: none;
+    }
+  }
+  .large_cube {
+    
+      // width: 450px;
+      // height: 150px;
+  }
+} 
+

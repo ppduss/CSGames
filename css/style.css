@@ -1,4 +1,5 @@
-@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -15,13 +16,18 @@ body {
 
 button {
   margin-top: 12px;
-  width: 231px;
+  width: 200px;
   height: 54px;
   color: #1D365E;
   font-family: "OpenSans-Extrabold";
   text-transform: uppercase;
   border: 2px solid #1D365E;
   background: none;
+}
+@media (min-width: 1200px) {
+  button {
+    width: 231px;
+  }
 }
 button.aqua {
   color: white;
@@ -34,9 +40,6 @@ h1, h2, h3, h4, h5 {
   color: white;
   text-transform: uppercase;
   font-family: "OpenSans-Extrabold";
-}
-h1.blue, h2.blue, h3.blue, h4.blue, h5.blue {
-  color: #1D365E;
 }
 
 h1 {
@@ -83,6 +86,18 @@ h5 {
 p {
   font-family: Montserrat-Regular;
   color: #1D365E;
+}
+
+.blue {
+  color: #194384;
+}
+
+.darkblue {
+  color: #1D365E;
+}
+
+.aqua {
+  color: #48C1E1;
 }
 
 #hdr_section {
@@ -326,86 +341,123 @@ p {
 }
 
 #countdown_section {
-  height: 579px;
+  height: 450px;
   background: linear-gradient(70deg, #10213E, #284B80);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#countdown_section #time_container {
+@media (min-width: 768px) {
+  #countdown_section {
+    height: 579px;
+  }
+}
+#countdown_section #countdown_hdr {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+@media (min-width: 576px) {
+  #countdown_section #countdown_hdr {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  #countdown_section #countdown_hdr {
+    margin-bottom: 60px;
+  }
+}
+#countdown_section .time_container {
+  display: none;
+  flex-direction: row;
   justify-content: space-between;
   max-width: 1364px;
 }
 @media (min-width: 576px) {
-  #countdown_section #time_container {
+  #countdown_section .time_container {
     width: 90vw;
   }
 }
 @media (min-width: 768px) {
-  #countdown_section #time_container {
+  #countdown_section .time_container {
+    display: flex;
     width: 90vw;
   }
 }
 @media (min-width: 1200px) {
-  #countdown_section #time_container {
+  #countdown_section .time_container {
     width: 80vw;
   }
 }
-#countdown_section #time_container .time_cube {
+#countdown_section .cont {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#countdown_section .time_cube {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
+  width: 350px;
   height: 150px;
   background-color: #194384;
   box-shadow: 0px 3px 6px #00000059;
 }
+@media (min-width: 576px) {
+  #countdown_section .time_cube {
+    width: 450px;
+    height: 150px;
+  }
+}
 @media (min-width: 768px) {
-  #countdown_section #time_container .time_cube {
+  #countdown_section .time_cube {
     width: 160px;
     height: 160px;
   }
 }
 @media (min-width: 992px) {
-  #countdown_section #time_container .time_cube {
+  #countdown_section .time_cube {
     width: 200px;
     height: 200px;
   }
 }
 @media (min-width: 1200px) {
-  #countdown_section #time_container .time_cube {
+  #countdown_section .time_cube {
     width: 230px;
     height: 230px;
   }
 }
 @media (min-width: 1400px) {
-  #countdown_section #time_container .time_cube {
+  #countdown_section .time_cube {
     width: 260px;
     height: 260px;
   }
 }
-#countdown_section #time_container .time_cube .time {
+#countdown_section .time {
   font-size: 3em;
 }
 @media (min-width: 768px) {
-  #countdown_section #time_container .time_cube .time {
+  #countdown_section .time {
     font-size: 4em;
   }
 }
 @media (min-width: 992px) {
-  #countdown_section #time_container .time_cube .time {
+  #countdown_section .time {
     font-size: 5em;
   }
 }
-#countdown_section #time_container .cont {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-#countdown_section #time_container .countdown_txt {
+#countdown_section .countdown_txt {
   margin-top: 10px;
+}
+#countdown_section .single_cube_container {
+  display: inline;
+}
+@media (min-width: 768px) {
+  #countdown_section .single_cube_container {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TEST-LP_Design</title>
   <link rel="stylesheet" href="./css/style.css">
+  
 </head>
 <body>
   <div class="main_container">
@@ -12,7 +13,7 @@
       <div id="hr"></div>
     <div class="hdr">
       <img class="logo" src="assets/Group 1.png" alt="CSGAMES">
-      <h5 class="blue"><a id="hdr_link" href="" target="_blank">Visit the old website >></a></h5>
+      <h5 class="darkblue"><a id="hdr_link" href="" target="_blank">Visit the old website >></a></h5>
     </div>
   </section>
 
@@ -21,7 +22,7 @@
     <div class="hero_content">
       <div class="hero_txt">
         <h1>are you</h1>
-        <h1 class="blue">game?</h1>
+        <h1 class="darkblue">game?</h1>
         <div id="hero_paragraph">
           <h6>The Computer Science Games are a collegiate competition that includes challenges from all aspects of computing.</h6>
           <p>The Games are a weekend long thrill ride with logic puzzles, difficult algorithms, intense video game competitions, social activities, and of course, programming. Organized by students from different university every year, the CS Games is open to all undergraduate students.</p>
@@ -47,14 +48,13 @@
     </div>
   </section>
 
-
   <section id="registration_section">
     <div id="registration_box">
       <img id="registration_img" src="assets/prohibition.png" alt="">
       <div id="registration_txt">
-        <h2 class="blue">CSG 20: Prohibition</h2>
-        <h4 class="blue">OCTOBER 30TH, 2020</h4>
-        <h5 class="blue">THEME:</h5>
+        <h2 class="darkblue">CSG 20: Prohibition</h2>
+        <h4 class="aqua">October 30TH, 2020</h4>
+        <h5 class="darkblue">Theme:</h5>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut labore et dolore magna.</p>
         <button class="aqua">register now</button>
         <button>learn more</button>
@@ -63,31 +63,49 @@
   </section>
 
   <section id="countdown_section">
-    <h3>COUNTDOWN TO 2020</h3><h3>COMPETITION</h3>
+    <div id="countdown_hdr">
+      <h2>Countdown to 2020</h2><h2 class="aqua">&nbsp; Competition</h2>
+    </div>
     
-    <div id="time_container">
+    <div class="time_container">
       <div class="cont">
-        <div class="time_cube"><h1 class="time" id="days">154</h1></div>
+        <div class="time_cube"><h1 class="time" id="days">x</h1></div>
         <h3 class="countdown_txt">DAYS</h3>
       </div>
       <div class="cont">
-        <div class="time_cube"><h1 class="time" id="hours">42</h1></div>
+        <div class="time_cube"><h1 class="time" id="hours">x</h1></div>
        <h3 class="countdown_txt" >HOURS</h3>
       </div>
       <div class="cont">
-        <div class="time_cube"><h1 class="time" id="minutes">33</h1></div>
+        <div class="time_cube"><h1 class="time" id="minutes">x</h1></div>
         <h3 class="countdown_txt">MINUTES</h3>
       </div>
       <div class="cont">
-        <div class="time_cube"><h1 class="time" id="seconds">33</h1></div>
+        <div class="time_cube"><h1 class="time" id="seconds">x</h1></div>
         <h3 class="countdown_txt">SECONDS</h3>
       </div>
     </div>
-    <div id="countdown_txt_container">
+
+    <div class="single_cube_container">
+      <div class="time_cube large_cube">
+         <h1 class="time_large" id="consolidatedtime">x</h1>
+      </div>
     </div>
+
   </section>
   
   </div>
   </div>
+ <!-- <script src="node_modules/dayjs/dayjs.min.js"></script> -->
+    <script src="index.js"></script>
+  <!-- <script>
+    import relativeTime from 'dayjs/plugin/advancedFormat'
+    dayjs.extend(relativeTime); 
+  
+  let now = dayjs();
+  document.getElementById("days").innerHTML = "hey";
+  console.log(now)
+
+  </script> -->
 </body>
 </html>
