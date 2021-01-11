@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   margin: 0;
   margin-top: -20px;
-  margin-bottom: -25px;
+  margin-bottom: -45px;
   font-size: 3em;
   @include sm {
     font-size: 4em;
@@ -87,7 +87,7 @@ h1 {
     font-size: 6em;
   }
   @include xl {
-    font-size: 6.5em;
+    font-size: 7em;
   }
 }
 h5 {
@@ -99,9 +99,15 @@ h5 {
     font-size: 0.95em;
   }
 }
+h6 {
+  font-size: 1em;
+  line-height: 30px;
+}
 p{
   font-family: Montserrat-Regular;
   color: $darkblue;
+  line-height: 30px;
+
 }
 
 .blue {
@@ -180,7 +186,7 @@ p{
       }
     }
     #hdr_link {
-      font-size: 1.1em;
+      font-size: 1.2em;
       // width: 50px;
     }
   }
@@ -229,6 +235,7 @@ p{
     position: relative;
     height: 680px;
     display: flex;
+    // align-content: center;
     align-items: center;
     @include sm {
       width: calc(400px + 40%);
@@ -241,18 +248,25 @@ p{
     }
 
     .hero_txt {
-      position: absolute;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+      position: relative;
       z-index: 1;
-      // padding: 30px;
-      width: 85%;
+      width: 90%;
       left: 6%;
       font-size: 1em;
       @include sm {
         left: 6%;
+
       }
       @include md {
         left: 0%;
         width: 80%;
+        position: absolute;
+        align-items: left;
+        
       }
       @include lg {
         width: 75%;
@@ -418,3 +432,86 @@ p{
   }
 } 
 
+#footer_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $aqua;
+  height: 500px;
+  width: 100%;
+  @include lg {
+    height: 309px;
+  }
+  .footer_main_container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    max-width: 1364px;
+    @include lg {
+      flex-direction: row;
+    }
+  }
+  .logo_square {
+    width: 100px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    @include md {
+      width: 125px;
+    }
+    @include xl {
+      width: auto;
+    }
+  }
+  .social {
+    width: 50%;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+    @include lg {
+      width: 20%;
+    }
+  }
+  .social_title{
+
+  }
+  .footer_legal {
+    margin: 0 10px;
+    text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
