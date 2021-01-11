@@ -30,6 +30,7 @@ button.aqua {
 }
 
 h1, h2, h3, h4, h5 {
+  margin: 0;
   color: white;
   text-transform: uppercase;
   font-family: "OpenSans-Extrabold";
@@ -315,13 +316,43 @@ p {
   }
 }
 #registration_section #registration_box #registration_txt {
-  padding: 4%;
   text-align: center;
+  margin: 0 4%;
 }
 @media (min-width: 768px) {
   #registration_section #registration_box #registration_txt {
     text-align: left;
   }
+}
+
+#countdown_section {
+  height: 579px;
+  background: linear-gradient(70deg, #10213E, #284B80);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#countdown_section #time_container {
+  display: flex;
+  justify-content: space-between;
+  width: 1364px;
+}
+#countdown_section .time_cube {
+  text-align: center;
+  align-self: center;
+  width: 260px;
+  height: 260px;
+  background-color: #194384;
+  box-shadow: 0px 3px 6px #00000059;
+}
+#countdown_section #time_txt_container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+#countdown_section .time_txt {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

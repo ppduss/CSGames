@@ -59,6 +59,7 @@ button {
   }
 }
 h1, h2, h3, h4, h5 {
+  margin: 0;
   color: white;
   text-transform: uppercase;
   font-family: 'OpenSans-Extrabold';
@@ -299,8 +300,8 @@ p{
   // }
   }
   #registration_txt {
-    padding: 4%;
     text-align: center;
+    margin: 0 4%;
     @include md {
     text-align: left;
 
@@ -310,35 +311,32 @@ p{
 }
 
 
-
-// #registration_txt_container {
-
-// }
-
-// #countdown_section {
-//   height: 579px;
-//   width: 1920px;
-//   max-width: 2598px;
-//   background: linear-gradient(70deg, #10213E, #284B80);
-// }
-
-// #time_container {
-//   display: flex;
-//   justify-content: space-between;
-//   width: 80%;
-// }
-// .time_cube {
-//   text-align: center;
-//   width: 260px;
-//   height: 260px;
-//   background-color: #194384;
-//   box-shadow: $shadow;
-// }
-// #time_txt_container {
-//   display: flex;
-//   justify-content: space-between;
-//   width: 80%;
-// }
-// .time_txt {
-//   color: white;
-// }
+#countdown_section {
+  height: 579px;
+  background: linear-gradient(70deg, #10213E, #284B80);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  #time_container {
+    display: flex;
+    justify-content: space-between;
+    width: 1364px;
+  }
+  .time_cube {
+    text-align: center;
+    align-self: center;
+    width: 260px;
+    height: 260px;
+    background-color: #194384;
+    box-shadow: $box-shadow;
+  }
+  #time_txt_container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .time_txt {
+    color: white;
+  }
+}
