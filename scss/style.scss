@@ -1,44 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import './global.scss';
 
-$aqua: #48C1E1;
-$blue: #194384;
-$darkblue: #1D365E;
-$box-shadow: 0px 3px 6px #00000059;
-
-//--- breakpoints  ---//
-$sm-min: 576px;
-$md-min: 768px;
-$lg-min: 992px;
-$xl-min: 1200px;
-
-@mixin sm {
-   @media (min-width: #{$sm-min}) {
-       @content;
-   }
-}
-@mixin md {
-   @media (min-width: #{$md-min}) {
-       @content;
-   }
-}
-@mixin lg {
-   @media (min-width: #{$lg-min}) {
-       @content;
-   }
-}
-@mixin xl {
-   @media (min-width: #{$xl-min}) {
-       @content;
-   }
-}
-@mixin custm($screen) {
-   @media (min-width: $screen+'px') {
-       @content;
-   }
-}
-
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 a {
   text-decoration: none;
   color: $darkblue;
@@ -47,18 +8,14 @@ a {
   text-decoration: underline;
   -moz-text-decoration-color: white;
   text-decoration-color: white;
-
   }
-}
-body {
-  margin: 0;
 }
 button {
   margin-top: 12px;
   width: 200px;
   height: 54px;
   color: $darkblue;
-  font-family: 'OpenSans-Extrabold';
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   border: 2px solid $darkblue;
   background: none;
@@ -81,8 +38,7 @@ h1, h2, h3, h4, h5 {
   margin: 0;
   color: white;
   text-transform: uppercase;
-  font-family: 'OpenSans-Extrabold';
-
+  font-family: 'Open Sans', sans-serif;
 }
 h1 {
   margin: 0;
@@ -126,7 +82,7 @@ h6 {
   }
 }
 p{
-  font-family: Montserrat-Regular;
+  font-family: 'Montserrat', sans-serif;
   color: $darkblue;
   line-height: 25px;
   font-size: 0.9em;
@@ -147,6 +103,7 @@ p{
   color: $aqua;
 }
 
+//--- classes and id are nested each section ---//
 
 .hdr_section {
   left: 50%;
@@ -175,22 +132,22 @@ p{
     width: 80vw;
   }
 
-    .hr {
-    top: 0px;
-    position: fixed;
-    width: 125px;
-    height: 5px;
-    background-color: #1d365e;
-    @include sm {
-      width: 200px;
-    }
-    @include md {
-      width: 275px;
-    }
-    @include xl {
-      width: 331.5px;
-    }
-    }
+  .hr {
+  top: 0px;
+  position: fixed;
+  width: 125px;
+  height: 5px;
+  background-color: #1d365e;
+  @include sm {
+    width: 200px;
+  }
+  @include md {
+    width: 275px;
+  }
+  @include xl {
+    width: 331.5px;
+  }
+  }
 
   .hdr {
     padding-right: 3%;
@@ -212,10 +169,9 @@ p{
         width: auto;
       }
     }
-    .hdr_link {
-      font-size: 1.2em;
-      // width: 50px;
-    }
+  }
+  .hdr_link {
+    font-size: 1.2em;
   }
 }
 
@@ -280,9 +236,6 @@ p{
       font-size: 1em;
       @include sm {
         left: 6%;
-
-      }
-      @include md {
       }
       @include lg {
         width: 75%;
@@ -314,7 +267,6 @@ p{
   }
 }
 
-
 .registration_section {
   margin: 5%;
   display: flex;
@@ -326,7 +278,6 @@ p{
   align-items: center;
   padding: 20px;
   max-width: 1364px;
-  // max-height: 428px;
   flex-direction: column;
     @include md {
     flex-direction: row;
@@ -336,27 +287,19 @@ p{
   width: 250px;
   @include sm {
     width: 300px;
-  }
+    }
   @include md {
     width: auto;
-  }
-  // @include lg {
-  // width: auto;
-  // }
-  // @include xl {
-  // width: auto;
-
-  // }
+    }
   }
   .registration_txt {
     text-align: center;
     margin: 0 4%;
     @include md {
-    text-align: left;
-
+      text-align: left;
+      }
     }
   }
-}
 }
 
 
@@ -435,16 +378,16 @@ p{
       }
   }
   .time {
-      font-size: 3em;
-      @include md {
-        font-size: 4em;
-      }
-      @include lg {
-        font-size: 5em;
-      }
+    font-size: 3em;
+    @include md {
+      font-size: 4em;
+    }
+    @include lg {
+      font-size: 5em;
+    }
   }
   .countdown_txt {
-      margin-top: 10px;
+    margin-top: 10px;
   }
 
   .single_cube_container {
