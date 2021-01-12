@@ -73,7 +73,6 @@ button {
     background-color: $aqua;
     border: none;
     &:hover {
-    // border: 3px solid white;
     background-color: $darkblue;
   }
   }
@@ -149,7 +148,7 @@ p{
 }
 
 
-#hdr_section {
+.hdr_section {
   left: 50%;
   transform: translate(-50%, 0);
   top: 37px;
@@ -176,7 +175,7 @@ p{
     width: 80vw;
   }
 
-    #hr {
+    .hr {
     top: 0px;
     position: fixed;
     width: 125px;
@@ -213,7 +212,7 @@ p{
         width: auto;
       }
     }
-    #hdr_link {
+    .hdr_link {
       font-size: 1.2em;
       // width: 50px;
     }
@@ -296,7 +295,7 @@ p{
         width: 75%;
       }
 
-      #hero_paragraph {
+      .hero_paragraph {
         width: 80%;
         text-align: center;
         @include md {
@@ -316,12 +315,12 @@ p{
 }
 
 
-#registration_section {
+.registration_section {
   margin: 5%;
   display: flex;
   justify-content: center;
 
-  #registration_box {
+  .registration_box {
   box-shadow: $box-shadow;
   display: flex;
   align-items: center;
@@ -333,7 +332,7 @@ p{
     flex-direction: row;
   }
   
-  #registration_img {
+  .registration_img {
   width: 250px;
   @include sm {
     width: 300px;
@@ -349,7 +348,7 @@ p{
 
   // }
   }
-  #registration_txt {
+  .registration_txt {
     text-align: center;
     margin: 0 4%;
     @include md {
@@ -361,7 +360,7 @@ p{
 }
 
 
-#countdown_section {
+.countdown_section {
   height: 450px;
   background: linear-gradient(70deg, #10213E, #284B80);
   display: flex;
@@ -371,7 +370,7 @@ p{
   @include md {
     height: 579px;
   }
-  #countdown_hdr {
+  .countdown_hdr {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -412,13 +411,15 @@ p{
     height: 150px;
     background-color: #194384;
     box-shadow: $box-shadow;
+    font-size: 0.6em;
       @include sm {
-      width: 450px;
+      width: 90vw;
       height: 150px;           
       }
       @include md {
       width: 160px;
-      height: 160px;           
+      height: 160px;
+      font-size: initial;
       }
       @include lg {
       width: 200px;
@@ -452,14 +453,9 @@ p{
       display: none;
     }
   }
-  .large_cube {
-    
-      // width: 450px;
-      // height: 150px;
-  }
 } 
 
-#footer_section {
+.footer_section {
   display: flex;
   flex-direction: column;
   justify-content: center;

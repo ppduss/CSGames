@@ -15,6 +15,8 @@ var counter = setInterval(function() {
   document.getElementById("hours").innerHTML = hours;
   document.getElementById("minutes").innerHTML = minutes;
   document.getElementById("seconds").innerHTML = seconds;
+    document.getElementById("consolidatedTime").innerHTML = days+"D "+hours+"H "+minutes+"M "+seconds+"S ";
+
 
   if (minutes < 0) {
     clearInterval(counter);
@@ -22,5 +24,6 @@ var counter = setInterval(function() {
     document.getElementById("hours").innerHTML = "NOW";
     document.getElementById("minutes").innerHTML = "NOW";
     document.getElementById("seconds").innerHTML = "NOW";
+    document.getElementById("consolidatedTime").innerHTML = "NOW";
   }
 }, 1000);
