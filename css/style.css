@@ -8,15 +8,25 @@ body {
   margin: 0;
 }
 
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 a {
   text-decoration: none;
   color: #1D365E;
-}
-a:hover {
-  font-size: 1.01em;
-  text-decoration: underline;
-  -moz-text-decoration-color: white;
-  text-decoration-color: white;
 }
 
 button {
@@ -28,6 +38,7 @@ button {
   text-transform: uppercase;
   border: 2px solid #1D365E;
   background: none;
+  cursor: pointer;
 }
 button:hover {
   border: 3px solid #1D365E;
@@ -101,6 +112,7 @@ h6 {
   font-size: 0.9em;
   line-height: 25px;
   margin: 25px auto;
+  font-family: "Montserrat", sans-serif;
 }
 @media (min-width: 576px) {
   h6 {
@@ -199,26 +211,29 @@ p {
   justify-content: space-between;
   width: 100%;
 }
-.hdr_section .hdr .logo {
+.hdr_section .logo {
   width: 100px;
 }
 @media (min-width: 576px) {
-  .hdr_section .hdr .logo {
+  .hdr_section .logo {
     width: 150px;
   }
 }
 @media (min-width: 768px) {
-  .hdr_section .hdr .logo {
+  .hdr_section .logo {
     width: 200px;
   }
 }
 @media (min-width: 1200px) {
-  .hdr_section .hdr .logo {
+  .hdr_section .logo {
     width: auto;
   }
 }
 .hdr_section .hdr_link {
   font-size: 1.2em;
+}
+.hdr_section .hdr_link:hover {
+  color: #48C1E1;
 }
 
 .hero_section {
@@ -271,6 +286,12 @@ p {
   height: 680px;
   display: flex;
   align-items: center;
+  -webkit-animation: appear;
+  animation: appear;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 @media (min-width: 576px) {
   .hero_section .hero_content {
@@ -284,25 +305,21 @@ p {
 }
 @media (min-width: 992px) {
   .hero_section .hero_content {
+    width: calc(70%);
     height: 741px;
   }
 }
-.hero_section .hero_content .hero_txt {
+.hero_section .hero_txt {
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1;
   width: 100%;
-  left: 6%;
+  left: 0%;
   font-size: 1em;
 }
-@media (min-width: 576px) {
-  .hero_section .hero_content .hero_txt {
-    left: 6%;
-  }
-}
 @media (min-width: 992px) {
-  .hero_section .hero_content .hero_txt {
+  .hero_section .hero_txt {
     width: 75%;
     display: inline;
     position: absolute;
@@ -310,26 +327,26 @@ p {
   }
 }
 @media (min-width: 1200px) {
-  .hero_section .hero_content .hero_txt {
-    left: -10%;
+  .hero_section .hero_txt {
+    left: -7%;
     width: 75%;
   }
 }
-.hero_section .hero_content .hero_txt .hero_paragraph {
+.hero_section .hero_paragraph {
   width: 80%;
   text-align: center;
 }
-@media (min-width: 768px) {
-  .hero_section .hero_content .hero_txt .hero_paragraph {
+@media (min-width: 992px) {
+  .hero_section .hero_paragraph {
     text-align: left;
   }
 }
-.hero_section .hero_content .svg {
+.hero_section .hero_svg {
   position: absolute;
   display: none;
 }
 @media (min-width: 768px) {
-  .hero_section .hero_content .svg {
+  .hero_section .hero_svg {
     display: inline;
   }
 }
@@ -346,6 +363,12 @@ p {
   padding: 20px;
   max-width: 1364px;
   flex-direction: column;
+  -webkit-animation: appear;
+  animation: appear;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 @media (min-width: 768px) {
   .registration_section .registration_box {
@@ -382,6 +405,12 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -webkit-animation: appear;
+  animation: appear;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 @media (min-width: 768px) {
   .countdown_section {
@@ -547,6 +576,9 @@ p {
   margin: 5px;
   margin-bottom: 30px;
   padding-top: 5px;
+}
+.footer_section .social:hover {
+  border-top: 2px solid white;
 }
 @media (min-width: 992px) {
   .footer_section .social {

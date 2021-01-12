@@ -42,3 +42,23 @@ $xl-min: 1200px;
        @content;
    }
 }
+
+//--- animations ---//
+
+@-webkit-keyframes appear {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes appear {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@mixin animParameters {
+  -webkit-animation: appear;
+  animation: appear;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}

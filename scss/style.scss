@@ -3,12 +3,6 @@
 a {
   text-decoration: none;
   color: $darkblue;
-  &:hover {
-  font-size: 1.01em;
-  text-decoration: underline;
-  -moz-text-decoration-color: white;
-  text-decoration-color: white;
-  }
 }
 button {
   margin-top: 12px;
@@ -19,6 +13,7 @@ button {
   text-transform: uppercase;
   border: 2px solid $darkblue;
   background: none;
+  cursor: pointer;
   &:hover {
     border: 3px solid $darkblue;
   }
@@ -52,7 +47,6 @@ h1 {
   @include md {
     font-size: 5em;
     margin-top: -20px;
-
   }
   @include lg {
     font-size: 6em;
@@ -75,6 +69,7 @@ h6 {
   font-size: 0.9em;
   line-height: 25px;
   margin: 25px auto;
+  font-family: 'Montserrat', sans-serif;
   @include sm {
     line-height: 30px;
     font-size: 1em;
@@ -157,35 +152,38 @@ p{
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    .logo {
-      width: 100px;
-      @include sm {
-        width: 150px;
-      }
-      @include md {
-        width: 200px;
-      }
-      @include xl {
-        width: auto;
-      }
+  }
+  .logo {
+    width: 100px;
+    @include sm {
+      width: 150px;
+    }
+    @include md {
+      width: 200px;
+    }
+    @include xl {
+      width: auto;
     }
   }
   .hdr_link {
     font-size: 1.2em;
+    &:hover {
+      color: $aqua;
+    }
   }
 }
 
 .hero_section {
-      height: 700px;
-    @include sm {
-      height: 800px;
-    }
-    @include md {
-      height: 1000px;
-    }
-    @include xl {
-      height: 1082px;
-    }
+   height: 700px;
+ @include sm {
+   height: 800px;
+ }
+ @include md {
+   height: 1000px;
+ }
+ @include xl {
+   height: 1082px;
+ }
   .hero_img {
     position: absolute;
     z-index: 0;
@@ -203,7 +201,6 @@ p{
       height: 1082px;
     }
   }
-
   .hero_content {
     top: 6vh;
     width: 100%;
@@ -212,8 +209,8 @@ p{
     position: relative;
     height: 680px;
     display: flex;
-    // align-content: center;
     align-items: center;
+    @include animParameters;
     @include sm {
       width: calc(400px + 40%);
     }
@@ -221,48 +218,41 @@ p{
       top: calc(100px + 6vw);
     }
     @include lg {
+    width: calc(70%);
     height: 741px;
     }
-
-    .hero_txt {
-      display: flex;
-      flex-direction: column;
-      // justify-content: center;
-      align-items: center;
-      // position: relative;
-      z-index: 1;
-      width: 100%;
-      left: 6%;
-      font-size: 1em;
-      @include sm {
-        left: 6%;
-      }
-      @include lg {
-        width: 75%;
-        display: inline;
-        position: absolute;
-        align-items: left;
-      }
-      @include xl {
-        left: -10%;
-        width: 75%;
-      }
-
-      .hero_paragraph {
-        width: 80%;
-        text-align: center;
-        @include md {
-          text-align: left;
-        }
-      }
-    }
-
-    .svg {
+  }
+  .hero_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    left: 0%;
+    font-size: 1em;
+    @include lg {
+      width: 75%;
+      display: inline;
       position: absolute;
-      display: none;
-      @include md {
-        display: inline;
-      }
+      align-items: left;
+    }
+    @include xl {
+      left: -7%;
+      width: 75%;
+    }
+  }
+  .hero_paragraph {
+    width: 80%;
+    text-align: center;
+    @include lg {
+      text-align: left;
+    }
+  }
+  .hero_svg {
+    position: absolute;
+    display: none;
+    @include md {
+      display: inline;
     }
   }
 }
@@ -279,10 +269,10 @@ p{
   padding: 20px;
   max-width: 1364px;
   flex-direction: column;
-    @include md {
+  @include animParameters;
+  @include md {
     flex-direction: row;
   }
-  
   .registration_img {
   width: 250px;
   @include sm {
@@ -302,7 +292,6 @@ p{
   }
 }
 
-
 .countdown_section {
   height: 450px;
   background: linear-gradient(70deg, #10213E, #284B80);
@@ -310,6 +299,7 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include animParameters;
   @include md {
     height: 579px;
   }
@@ -439,45 +429,16 @@ p{
     margin: 5px;
     margin-bottom: 30px;
     padding-top: 5px;
+    &:hover {
+      border-top: 2px solid white;
+    }
     @include lg {
       width: 20%;
     }
   }
-  .social_title{
 
-  }
   .footer_legal {
     margin: 0 10px;
     text-align: center;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
