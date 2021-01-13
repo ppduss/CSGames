@@ -1,4 +1,4 @@
-@import './global.scss';
+@import "./global.scss";
 
 a {
   text-decoration: none;
@@ -9,11 +9,12 @@ button {
   width: 200px;
   height: 54px;
   color: $darkblue;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   border: 2px solid $darkblue;
   background: none;
   cursor: pointer;
+  transition: all 0.1s;
   &:hover {
     border: 3px solid $darkblue;
   }
@@ -25,15 +26,19 @@ button {
     background-color: $aqua;
     border: none;
     &:hover {
-    background-color: $darkblue;
-  }
+      background-color: $darkblue;
+    }
   }
 }
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
   color: white;
   text-transform: uppercase;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 h1 {
   margin: 0;
@@ -69,15 +74,15 @@ h6 {
   font-size: 0.9em;
   line-height: 25px;
   margin: 25px auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   @include sm {
     line-height: 30px;
     font-size: 1em;
     margin: 37px auto;
   }
 }
-p{
-  font-family: 'Montserrat', sans-serif;
+p {
+  font-family: "Montserrat", sans-serif;
   color: $darkblue;
   line-height: 25px;
   font-size: 0.9em;
@@ -128,20 +133,20 @@ p{
   }
 
   .hr {
-  top: 0px;
-  position: fixed;
-  width: 125px;
-  height: 5px;
-  background-color: #1d365e;
-  @include sm {
-    width: 200px;
-  }
-  @include md {
-    width: 275px;
-  }
-  @include xl {
-    width: 331.5px;
-  }
+    top: 0px;
+    position: fixed;
+    width: 125px;
+    height: 5px;
+    background-color: #1d365e;
+    @include sm {
+      width: 200px;
+    }
+    @include md {
+      width: 275px;
+    }
+    @include xl {
+      width: 331.5px;
+    }
   }
 
   .hdr {
@@ -174,26 +179,26 @@ p{
 }
 
 .hero_section {
-   height: 700px;
- @include sm {
-   height: 800px;
- }
- @include md {
-   height: 1000px;
- }
- @include xl {
-   height: 1082px;
- }
+  height: 700px;
+  @include sm {
+    height: 800px;
+  }
+  @include md {
+    height: 1000px;
+  }
+  @include xl {
+    height: 1082px;
+  }
   .hero_img {
     position: absolute;
     z-index: 0;
     opacity: 0.85;
     width: 100%;
     object-fit: cover;
-      height: 700px;
+    height: 700px;
     @include sm {
       height: 800px;
-    }      
+    }
     @include md {
       height: 1000px;
     }
@@ -218,8 +223,8 @@ p{
       top: calc(100px + 6vw);
     }
     @include lg {
-    width: calc(70%);
-    height: 741px;
+      width: calc(70%);
+      height: 741px;
     }
   }
   .hero_txt {
@@ -263,30 +268,30 @@ p{
   justify-content: center;
 
   .registration_box {
-  box-shadow: $box-shadow;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  max-width: 1364px;
-  flex-direction: column;
-  @include animParameters;
-  @include md {
-    flex-direction: row;
-  }
-  .registration_img {
-  width: 250px;
-  @include sm {
-    width: 300px;
-    }
-  @include md {
-    width: auto;
-    }
-  }
-  .registration_txt {
-    text-align: center;
-    margin: 0 4%;
+    box-shadow: $box-shadow;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-width: 1364px;
+    flex-direction: column;
+    @include animParameters;
     @include md {
-      text-align: left;
+      flex-direction: row;
+    }
+    .registration_img {
+      width: 250px;
+      @include sm {
+        width: 300px;
+      }
+      @include md {
+        width: auto;
+      }
+    }
+    .registration_txt {
+      text-align: center;
+      margin: 0 4%;
+      @include md {
+        text-align: left;
       }
     }
   }
@@ -294,7 +299,7 @@ p{
 
 .countdown_section {
   height: 450px;
-  background: linear-gradient(70deg, #10213E, #284B80);
+  background: linear-gradient(70deg, #10213e, #284b80);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -321,15 +326,15 @@ p{
     justify-content: space-between;
     max-width: 1364px;
     @include sm {
-    width: 90vw;
+      width: 90vw;
     }
     @include md {
-    display: flex;
-    width: 90vw;
+      display: flex;
+      width: 90vw;
     }
     @include xl {
-    width: 80vw;
-    } 
+      width: 80vw;
+    }
   }
   .cont {
     align-items: center;
@@ -345,27 +350,27 @@ p{
     background-color: #194384;
     box-shadow: $box-shadow;
     font-size: 0.6em;
-      @include sm {
+    @include sm {
       width: 90vw;
-      height: 150px;           
-      }
-      @include md {
+      height: 150px;
+    }
+    @include md {
       width: 160px;
       height: 160px;
       font-size: initial;
-      }
-      @include lg {
+    }
+    @include lg {
       width: 200px;
-      height: 200px;           
-      }
-      @include xl {
+      height: 200px;
+    }
+    @include xl {
       width: 230px;
-      height: 230px;           
-      }
-      @include custm(1400) {
+      height: 230px;
+    }
+    @include custm(1400) {
       width: 260px;
-      height: 260px;        
-      }
+      height: 260px;
+    }
   }
   .time {
     font-size: 3em;
@@ -386,7 +391,7 @@ p{
       display: none;
     }
   }
-} 
+}
 
 .footer_section {
   display: flex;
@@ -430,7 +435,8 @@ p{
     margin-bottom: 30px;
     padding-top: 5px;
     &:hover {
-      border-top: 2px solid white;
+      transition: all 0.1s;
+      filter: drop-shadow(1px 1px 3px #1944847e);
     }
     @include lg {
       width: 20%;

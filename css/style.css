@@ -26,22 +26,23 @@ body {
 }
 a {
   text-decoration: none;
-  color: #1D365E;
+  color: #1d365e;
 }
 
 button {
   margin-top: 12px;
   width: 200px;
   height: 54px;
-  color: #1D365E;
+  color: #1d365e;
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
-  border: 2px solid #1D365E;
+  border: 2px solid #1d365e;
   background: none;
   cursor: pointer;
+  transition: all 0.1s;
 }
 button:hover {
-  border: 3px solid #1D365E;
+  border: 3px solid #1d365e;
 }
 @media (min-width: 1200px) {
   button {
@@ -50,14 +51,18 @@ button:hover {
 }
 button.aqua {
   color: white;
-  background-color: #48C1E1;
+  background-color: #48c1e1;
   border: none;
 }
 button.aqua:hover {
-  background-color: #1D365E;
+  background-color: #1d365e;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
   color: white;
   text-transform: uppercase;
@@ -124,7 +129,7 @@ h6 {
 
 p {
   font-family: "Montserrat", sans-serif;
-  color: #1D365E;
+  color: #1d365e;
   line-height: 25px;
   font-size: 0.9em;
 }
@@ -140,11 +145,11 @@ p {
 }
 
 .darkblue {
-  color: #1D365E;
+  color: #1d365e;
 }
 
 .aqua {
-  color: #48C1E1;
+  color: #48c1e1;
 }
 
 .hdr_section {
@@ -233,7 +238,7 @@ p {
   font-size: 1.2em;
 }
 .hdr_section .hdr_link:hover {
-  color: #48C1E1;
+  color: #48c1e1;
 }
 
 .hero_section {
@@ -400,7 +405,7 @@ p {
 
 .countdown_section {
   height: 450px;
-  background: linear-gradient(70deg, #10213E, #284B80);
+  background: linear-gradient(70deg, #10213e, #284b80);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -531,7 +536,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #48C1E1;
+  background-color: #48c1e1;
   height: 500px;
   width: 100%;
 }
@@ -578,7 +583,8 @@ p {
   padding-top: 5px;
 }
 .footer_section .social:hover {
-  border-top: 2px solid white;
+  transition: all 0.1s;
+  filter: drop-shadow(1px 1px 3px #1944847e);
 }
 @media (min-width: 992px) {
   .footer_section .social {
